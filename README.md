@@ -36,7 +36,7 @@ cd movie-explorer
 npm install
 ```
 
-### 3. Create a .env file
+### 3. Create a .env file (Don't need that step i didn't remove api key)
 In the root directory of the project, create a .env file and add your TMDb API key:
 ```bash
 REACT_APP_TMDB_API_KEY='YOUR_TMDB_API_KEY_HERE'
