@@ -31,17 +31,17 @@ Enter any user name and password
 git clone https://github.com/yourusername/movie-explorer.git
 cd movie-explorer
 ```
-###2. Install dependencies
+### 2. Install dependencies
 ```bash
 npm install
 ```
 
-###3. Create a .env file
+### 3. Create a .env file
 In the root directory of the project, create a .env file and add your TMDb API key:
 ```bash
 REACT_APP_TMDB_API_KEY='YOUR_TMDB_API_KEY_HERE'
 ```
-###4. Start the development server
+### 4. Start the development server
 ```bash
 npm start
 ```
