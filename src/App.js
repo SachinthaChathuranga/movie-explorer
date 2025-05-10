@@ -8,7 +8,6 @@ import MoviePage from "./pages/MoviePage";
 import LoginPage from "./pages/LoginPage";
 import FavoritesPage from "./pages/FavoritesPage";
 import { MovieProvider } from "./context/MovieContext";
-import ThemeToggle from "./components/ThemeToggle";
 import getTheme from "./theme";
 import Navbar from "./components/Navbar";
 import TrendingMoviesPage from "./pages/TrendingMoviesPage";

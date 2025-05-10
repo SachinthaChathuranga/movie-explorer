@@ -1,16 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  Box,
-  Typography,
-  Card,
-  CardMedia,
-  CardContent,
-  Chip,
-  IconButton,
-  Avatar,
-  Tooltip
-} from "@mui/material";
+import { Box, Typography, IconButton, Tooltip } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useTheme } from "@mui/material/styles";
 import MovieCard from "./MovieCard";
@@ -72,27 +62,27 @@ export default function MovieGrid({ title, movies, navLink }) {
           <MovieCard key={`${movie.id}-${index}`} movie={movie} index={index} />
         ))}
       </Box>
-        <Tooltip title={`Go to ${title}`}>
-      <IconButton
-        onClick={goToTrending}
-        sx={{
-          position: "absolute",
-          top: "40%",
-          right: -10,
-          backgroundColor: theme.palette.background.paper,
-          color: theme.palette.text.primary,
-          boxShadow: 2,
-          zIndex: 1,
-          "&:hover": {
-            backgroundColor:
-              theme.palette.mode === "dark"
-                ? theme.palette.grey[800]
-                : theme.palette.grey[200],
-          },
-        }}
-      >
-        <ArrowForwardIosIcon />
-      </IconButton>
+      <Tooltip title={`Go to ${title}`}>
+        <IconButton
+          onClick={goToTrending}
+          sx={{
+            position: "absolute",
+            top: "40%",
+            right: -10,
+            backgroundColor: theme.palette.background.paper,
+            color: theme.palette.text.primary,
+            boxShadow: 2,
+            zIndex: 1,
+            "&:hover": {
+              backgroundColor:
+                theme.palette.mode === "dark"
+                  ? theme.palette.grey[800]
+                  : theme.palette.grey[200],
+            },
+          }}
+        >
+          <ArrowForwardIosIcon />
+        </IconButton>
       </Tooltip>
     </Box>
   );

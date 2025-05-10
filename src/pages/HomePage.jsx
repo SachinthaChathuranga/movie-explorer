@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography,  } from "@mui/material";
 import { useMovieContext } from "../context/MovieContext";
 import MovieCard from "../components/MovieCard";
 import {
@@ -11,7 +11,6 @@ import {
 } from "../services/api";
 import SearchBar from "../components/SearchBar";
 import FilterBar from "../components/FilterBar";
-import TrendingCarousel from "../components/TrendingCarousel";
 import MovieGrid from "../components/MovieGrid";
 
 export default function HomePage() {
@@ -55,7 +54,7 @@ const [filterHasMore, setFilterHasMore] = useState(false);
     setMovies(results);
     setSearchQuery(query);
     setPage(2); // next page to load
-    setHasMore(results.length > 0); // toggle based on availability
+    setHasMore(results.length > 0); 
     setIsFiltered(true);
   };
 

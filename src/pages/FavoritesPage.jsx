@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Container, Box } from "@mui/material";
+import {  Typography,  Box } from "@mui/material";
 import { useMovieContext } from "../context/MovieContext";
 import MovieCard from "../components/MovieCard";
 

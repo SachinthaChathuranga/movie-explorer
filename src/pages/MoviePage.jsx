@@ -13,7 +13,6 @@ import {
   Chip,
   Divider,
   Tooltip,
-  Stack,
   useMediaQuery,
 } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -26,10 +25,8 @@ export default function MoviePage() {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [trailerKey, setTrailerKey] = useState(null);
-  const [favorite, setFavorite] = useState(false);
   const { favorites, toggleFavorite } = useMovieContext();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   useEffect(() => {
     const loadDetails = async () => {

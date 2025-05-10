@@ -66,9 +66,9 @@ export default function PopularMoviesPage() {
           textAlign: "center",
           display: { xs: "block", sm: "none" },
           zIndex: 20,
-          position: "relative", // Position relative to apply z-index
-          width: "100%", // Ensure it takes full width
-          py: 2, // Padding on top and bottom
+          position: "relative", 
+          width: "100%", 
+          py: 2, 
         }}
       >
         🔥 Popular Movies
