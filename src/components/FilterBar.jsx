@@ -45,11 +45,12 @@ export default function FilterBar({ onFilter }) {
     <Paper
       sx={{
         display: "flex",
-        gap: { xs: 1, sm: 2 },
+        flexDirection: { xs: "column", sm: "row" }, // 👈 Stack on mobile
+        gap: { xs: 2, sm: 2 },
         mt: 4,
-        p: 1,
+        p: 2,
         justifyContent: "center",
-        width: { xs: "100%", sm: "80%", md: "30%" },
+        width: { xs: "90%", sm: "80%", md: "30%" },
         margin: "0 auto",
         alignItems: "center",
       }}
@@ -62,7 +63,7 @@ export default function FilterBar({ onFilter }) {
         value={genre}
         onChange={(e) => setGenre(e.target.value)}
         sx={{
-          width: 120,
+          width: { xs: "100%", sm: 120 },
           "& .MuiInputBase-root": {
             height: 40,
           },
@@ -81,12 +82,14 @@ export default function FilterBar({ onFilter }) {
         options={years}
         value={year}
         onInputChange={(event, newInputValue) => setYear(newInputValue)}
+        sx={{
+          width: { xs: "100%", sm: 100 }, // 👈 Add this
+        }}
         renderInput={(params) => (
           <TextField
             {...params}
             label="Year"
             sx={{
-              width: 100,
               "& .MuiInputBase-root": {
                 height: 40,
               },
@@ -102,7 +105,7 @@ export default function FilterBar({ onFilter }) {
         value={rating}
         onChange={(e) => setRating(e.target.value)}
         sx={{
-          width: 120,
+          width: { xs: "100%", sm: 120 },
           "& .MuiInputBase-root": {
             height: 40,
           },
@@ -118,7 +121,13 @@ export default function FilterBar({ onFilter }) {
       {/* Filter Button */}
       <Button
         variant="contained"
-        sx={{ px: { xs: 1, sm: 3 } }}
+        sx={{
+          px: { xs: 1, sm: 3 },
+          width: { xs: "100%", sm: 120 },
+          "& .MuiInputBase-root": {
+            height: 40,
+          },
+        }}
         onClick={handleFilter}
       >
         Find

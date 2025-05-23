@@ -97,7 +97,7 @@ const [filterHasMore, setFilterHasMore] = useState(false);
       <Box
         sx={{
           position: "relative",
-          height: 400,
+          height: { xs: 600, sm: 300, md: 400 },
           borderRadius: 2,
           overflow: "hidden",
           mb: 3,
@@ -110,7 +110,7 @@ const [filterHasMore, setFilterHasMore] = useState(false);
             inset: 0,
             zIndex: 0,
             backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${bannerImage})`,
-            backgroundSize: "center",
+            backgroundSize: "cover",
             backgroundPosition: "center",
             filter: "blur(2px)",
             transform: "scale(1.1)",
